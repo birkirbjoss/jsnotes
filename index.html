@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCtrD5rBiDZQRBCUxWQWPJyIs73PHp24k4",
+            authDomain: "test-d0862.firebaseapp.com",
+            databaseURL: "https://test-d0862.firebaseio.com",
+            projectId: "test-d0862",
+            storageBucket: "",
+            messagingSenderId: "1015572690149"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+</head>
+
+<body>
+
+    <form action="">
+
+        <label>
+            Header:
+            <input type="text" name="header" id="header">Header
+        </label>
+        <label for="">
+            Description:
+            <textarea id="description" name="form_description" id="" cols="30" rows="10"></textarea>
+        </label>
+
+        <input type="submit">
+    </form>
+
+    <div id="app">
+
+<template id="noteTemplate">
+
+        <article>
+          <h1></h1>
+          <div class="description"></div>  
+        </article>
+
+</template>
+
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+
+
+
+</html>

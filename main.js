@@ -9,7 +9,7 @@ form.addEventListener("submit", (e)=>{
     e.preventDefault();
     
    // 
-    console.log(headerEl.value)
+    
     database.ref("notes/").push({
         header: headerEl.value,
         description: descriptionEl.value
@@ -21,7 +21,7 @@ form.addEventListener("submit", (e)=>{
 });
 
 database.ref("notes/").on("child_added", (snapshot)=>{
-    console.log(snapshot);
+   
     const key = snapshot.key;
     const data = snapshot.val();
 
@@ -29,4 +29,8 @@ database.ref("notes/").on("child_added", (snapshot)=>{
     clone.querySelector("h1").textContent = data.header;
     clone.querySelector("div.description").textContent = data.description;
     app.appendChild(clone);
-})
+});
+
+database.ref("notes/").on("child_removed", snapshot=>{
+    console.log(snapshot.key, snapshot.val());
+});
